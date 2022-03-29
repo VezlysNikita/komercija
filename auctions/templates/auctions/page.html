@@ -1,0 +1,54 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    <div class="container" style="margin-top:50px;">
+        <div class="row row-cols-auto">
+            {% for listing in listings %}
+
+                <div class="page">
+                    <div id="imagestyle" style="width: 400px; height:500px; padding:5px;">
+                        <img src="{{listing.img_link}}" class="card-img-top" id="imageview">
+                    </div>
+
+                    <div class="card-body" id="itemprops">
+
+                        <h2 id="itemtitle"><strong>{{listing.title}}</strong></h2>
+
+                        <form action="{% url 'addwatchlist' listing.listing_id %}" method="post">
+                            {% csrf_token %}
+
+                            <input class="btn btn-danger" type="submit" id="bookmark" value="watchlist">
+
+                        </form>
+
+
+                        <form method="post">
+                            {% csrf_token %}
+
+                            <input class="btn btn-danger" type="submit" value="close">
+
+                        </form>
+
+                        <div id="descriptionview">
+                            <strong id="desc">Description:</strong>
+                            <p id="desctxt">{{listing.description}}</p>
+                        </div>
+                        <strong class="card-text" id="categoryview">Category: {{listing.category}}</strong>
+
+                        <form method="post" id="bidform">
+                            {% csrf_token %}
+                            <strong id="priceview">Price: {{listing.price}}$<strong/></h1>
+                            <input class="form-control" type="text" name="bidform" placeholder="Your bid:">
+
+                        </form>
+
+                        <input class="btn btn-danger" type="submit" value="close">
+                        
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>    
+
+{% endblock %}

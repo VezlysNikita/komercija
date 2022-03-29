@@ -1,0 +1,119 @@
+body {
+    padding: 10px;
+}
+
+#unavailable {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.card {
+    left: -10%;
+}
+
+#image {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+#imageview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+#imagestyle {
+    border: 2px solid black;
+    outline: #262626 solid 10px;
+    align-items: left;
+    justify-content: left;
+    position: absolute;
+    left: 80px;
+}
+
+#itemprops {
+    justify-content: right;
+    position: relative;
+    width: 200px;
+    left: 80%;
+}
+
+#itemtitle {
+    font-size: 500%;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    right: -300%;
+    text-transform: uppercase;
+}
+
+#priceview {
+    font-size: 200%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    top: 40px;
+    left: 130%;
+    align-items: left;
+    border: #262626 4px;
+}
+
+#categoryview {
+    font-size: 200%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    top: 250px;
+    left: 130%;
+    align-items: left;
+    border: #262626 4px;
+}
+
+#descriptionview {
+    position: relative;
+    font-size: 30px;
+    top: 70px;
+    left: 130%;
+    margin-left: 10px;
+    align-items: left;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+}
+
+#desc {
+    font-size: xxx-large;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    top: 10px;
+    left: 0%;
+    align-items: left;
+    border: #262626 4px;
+}
+
+#desctxt {
+    margin-top: 10px;
+    font-size: 50%;
+    display: flex;
+    justify-content: left;
+    align-self: left;
+}
+
+.page {
+    max-width: 960px;
+}
+
+#bookmark {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    top: -5px;
+    size: 200px;
+    right: -400%;
+}
